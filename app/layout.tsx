@@ -1,24 +1,23 @@
-import type { Metadata } from 'next'
-import './globals.css'
-
-export const metadata: Metadata = {
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
 };
-  title: 'DeepDive Intelligence',
-  description: 'AI-powered web search analysis with positive/negative signal scoring',
-  keywords: ['search', 'analysis', 'AI', 'intelligence', 'scoring'],
-  authors: [{ name: 'DeepDive Team' }],
-  robots: 'index, follow',
-}
+
+export const metadata: Metadata = {
+  title: "DeepDive Intelligence",
+  description: "AI-powered web search analysis with positive/negative signal scoring",
+  keywords: ["search", "analysis", "AI", "intelligence", "scoring"],
+  authors: [{ name: "DeepDive Team" }],
+  robots: "index, follow",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -27,10 +26,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#0ea5e9" />
       </head>
       <body className="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 antialiased">
-        <div className="min-h-screen flex flex-col">
-          {children}
-        </div>
+        <div className="min-h-screen flex flex-col">{children}</div>
       </body>
     </html>
-  )
+  );
 }
