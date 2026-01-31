@@ -2,11 +2,16 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+import type { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
   title: 'DeepDive Intelligence',
   description: 'AI-powered web search analysis with positive/negative signal scoring',
   keywords: ['search', 'analysis', 'AI', 'intelligence', 'scoring'],
   authors: [{ name: 'DeepDive Team' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
 }
 
